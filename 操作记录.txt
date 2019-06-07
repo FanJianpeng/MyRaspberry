@@ -1,0 +1,26 @@
+20190606
+新烧录了树莓派系统，版本 2019-04-09 Raspbian Steetch
+
+更新源
+参考https://mirror.tuna.tsinghua.edu.cn/help/raspbian/
+更新了清华大学的镜像源
+# 编辑 `/etc/apt/sources.list` 文件，删除原文件所有内容，用以下内容取代：
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+
+# 编辑 `/etc/apt/sources.list.d/raspi.list` 文件，删除原文件所有内容，用以下内容取代：
+deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ stretch main
+
+更新
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+安装中文输入法
+$ sudo apt-get install fcitx fcitx-googlepinyin fcitx-module-cloudpinyin fcitx-sunpinyin
+重启生效
+
+查看系统版本
+$ uname -a
+
+安装vim
+$ sudo apt-get install vim
